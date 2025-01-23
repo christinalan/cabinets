@@ -46,19 +46,21 @@ import Icon6Url from '../icons/ip6.svg?url'
 const Cabinet: React.FC = () => {
     const [showIcons, setShowIcons] = useState<boolean>(false);
     const [cabinets, setCabinets] = useState(["existing"]);
-    const cabinetRefs = useRef<(HTMLDivElement | null)[]>(null!);
+    const cabinetRefs = useRef<(HTMLDivElement | null)[]>([]);
     
     // const Icon_Panel_Width = 25;
 
     useEffect(() => {
         if (cabinets.length > 1) {
             //animate cabinets whenever a new cabinet is added
-            gsap.to(cabinetRefs.current.slice(0, -1), {
-                x: "-=10", //move 150px to the left
-                duration: 1,
-                stagger: 0.1, // add a delay between each cabinet's movement
-                ease: "power2.out"
-            })
+            if (cabinetRefs.current) {
+                gsap.to(cabinetRefs.current.slice(0, -1).filter(Boolean), {
+                    x: "-=10",
+                    duration: 1,
+                    stagger: 0.1,
+                    ease: "power2.out",
+                });
+            }
         }
     }, [cabinets])
 
@@ -119,9 +121,13 @@ const Cabinet: React.FC = () => {
             {cabinets.map((cabinet, index) => (
                 <div 
                     key={index}
-                    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-                    // @ts-ignore: ref is defined
-                    ref={(el) => (cabinetRefs.current[index] = el)}
+                    ref={(el) => {
+                        if (el) {
+                            cabinetRefs.current[index] = el; // Assign element
+                        } else {
+                            delete cabinetRefs.current[index]; // Clear when unmounted
+                        }
+                    }}
                     className="relative"    
                 >
                     <Image 
