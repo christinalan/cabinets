@@ -12,11 +12,3 @@
 
 [build.environment]
   NODE_VERSION = "20"
-
-[build]
-  command = "next build"
-  publish = ".next"
-  functions = "netlify/functions"
-
-[build.environment]
-  NODE_ENV = "production"
