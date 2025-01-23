@@ -14,7 +14,7 @@
   NODE_VERSION = "20"
 
 [build]
-  command = "npm run build"
+  command = "next build"
   publish = ".next"
   functions = "netlify/functions"
 
