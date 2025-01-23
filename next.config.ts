@@ -4,7 +4,7 @@ const nextConfig: NextConfig = {
   /* config options here */
   webpack(config) {
     config.module.rules.push(
-      [
+      
         {
           test: /\.svg$/i,
           type: 'asset',
@@ -15,7 +15,7 @@ const nextConfig: NextConfig = {
           issuer: /\.[jt]sx?$/,
           use: [{ loader: '@svgr/webpack', options: { icon: true } }],
         }
-      ]
+      
      );
     return config;
   },
