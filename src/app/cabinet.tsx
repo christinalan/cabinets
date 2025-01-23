@@ -46,7 +46,7 @@ import Icon6Url from '../icons/ip6.svg?url'
 const Cabinet: React.FC = () => {
     const [showIcons, setShowIcons] = useState<boolean>(false);
     const [cabinets, setCabinets] = useState(["existing"]);
-    const cabinetRefs = useRef<(HTMLDivElement | null)[]>([]);
+    const cabinetRefs = useRef<(HTMLDivElement | null)[]>(null!);
     
     // const Icon_Panel_Width = 25;
 
@@ -119,6 +119,8 @@ const Cabinet: React.FC = () => {
             {cabinets.map((cabinet, index) => (
                 <div 
                     key={index}
+                    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                    // @ts-ignore: ref is defined
                     ref={(el) => (cabinetRefs.current[index] = el)}
                     className="relative"    
                 >
