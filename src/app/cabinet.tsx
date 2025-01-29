@@ -4,14 +4,16 @@ import Image from "next/image";
 import { gsap } from "gsap"
 import Sort_Cabinet from "../images/Sort_Cabinet.png"
 import Sort_Ghost_Cabinet from "../images/Sort_Ghost_Cabinet.png"
-import Add_IconUrl from '../icons/add.svg?url'
-import Close_IconUrl from '../icons/close.svg?url'
-import Icon1Url from '../icons/ip1.svg?url'
-import Icon2Url from '../icons/ip2.svg?url'
-import Icon3Url from '../icons/ip3.svg?url'
-import Icon4Url from '../icons/ip4.svg?url'
-import Icon5Url from '../icons/ip5.svg?url'
-import Icon6Url from '../icons/ip6.svg?url'
+import Add_IconUrl from '../icons/add.svg'
+import Close_IconUrl from '../icons/close.svg'
+import Icon1Url from '../icons/ip1.svg'
+import Icon2Url from '../icons/ip2.svg'
+import Icon3Url from '../icons/ip3.svg'
+import Icon4Url from '../icons/ip4.svg'
+import Icon5Url from '../icons/ip5.svg'
+import Icon6Url from '../icons/ip6.svg'
+import Icon7Url from '../icons/ip7.svg'
+// import Icon6Url from '../icons/ip6.svg?url'
 
 
 // type IconGridProps = {
@@ -98,7 +100,7 @@ const Cabinet: React.FC = () => {
                     className="cursor-pointer block"
                     onClick={() => setShowIcons(false)}
                 />
-                 {[Icon1Url, Icon2Url, Icon3Url, Icon4Url, Icon5Url, Icon6Url].map((ip,idx) => (
+                 {[Icon1Url, Icon2Url, Icon3Url, Icon4Url, Icon5Url, Icon6Url, Icon7Url].map((ip,idx) => (
                     <Image 
                         key={idx}
                         src={ip}
@@ -139,7 +141,6 @@ const Cabinet: React.FC = () => {
                     />
                 </div>
             ))}
-
         </div>
 
         {/* <div>
