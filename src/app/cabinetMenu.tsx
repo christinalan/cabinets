@@ -1,15 +1,15 @@
 "use client"
 import React, { useState } from "react";
 import Image from "next/image";
-import Add_Icon from '../icons/add.svg'
-import Close_Icon from '../icons/close.svg'
-import Icon1 from '../icons/ip1.svg'
-import Icon2 from '../icons/ip2.svg'
-import Icon3 from '../icons/ip3.svg'
-import Icon4 from '../icons/ip4.svg'
-import Icon5 from '../icons/ip5.svg'
-import Icon6 from '../icons/ip6.svg'
-import Icon7 from '../icons/ip7.svg'
+import Add_Icon from '../icons/add.svg?url'
+import Close_Icon from '../icons/close.svg?url'
+import Icon1 from '../icons/ip1.svg?url'
+import Icon2 from '../icons/ip2.svg?url'
+import Icon3 from '../icons/ip3.svg?url'
+import Icon4 from '../icons/ip4.svg?url'
+import Icon5 from '../icons/ip5.svg?url'
+import Icon6 from '../icons/ip6.svg?url'
+import Icon7 from '../icons/ip7.svg?url'
 
 interface CabinetMenuProps {
     onHoverCabinet: (type: string | null) => void; // Callback to communicate hovered cabinet type
