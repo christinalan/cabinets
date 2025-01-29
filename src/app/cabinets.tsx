@@ -3,7 +3,7 @@ import React, { useState, useRef, useEffect }  from "react";
 import Image from "next/image";
 import { gsap } from "gsap"
 // Import cabinet images
-import Sort_Cabinet from "../images/Sort_Cabinet.png"
+// import Sort_Cabinet from "../images/Sort_Cabinet.png"
 
 
 interface Cabinet {
@@ -17,7 +17,7 @@ interface CabinetsProps {
 }
 
 const Cabinets: React.FC<CabinetsProps> = ({  cabinets, solidCabinets, }) => {
-const existingCabinetRef = useRef<HTMLDivElement | null>(null);
+// const existingCabinetRef = useRef<HTMLDivElement | null>(null);
 const [isFirstAnimation, setIsFirstAnimation] = useState(true); // Track if it's the first animation
 const cabinetRefs = useRef<(HTMLDivElement | null)[]>([]);
 const solidCabinetRefs = useRef<(HTMLDivElement | null)[]>([]);

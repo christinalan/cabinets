@@ -4,7 +4,7 @@ import Image from "next/image";
 import { gsap } from "gsap"
 import Sort_Cabinet from "../images/Sort_Cabinet.png"
 import Sort_Ghost_Cabinet from "../images/Sort_Ghost_Cabinet.png"
-import Add_IconUrl from '../icons/add.svg'
+import Add_Icon from '../icons/add.svg'
 import Close_IconUrl from '../icons/close.svg'
 import Icon1Url from '../icons/ip1.svg'
 import Icon2Url from '../icons/ip2.svg'
@@ -82,7 +82,7 @@ const Cabinet: React.FC = () => {
           {!showIcons ? (
             <div className="grid grid-cols-[auto_1fr_auto] items-center w-full z-10">
               <Image
-                src={Add_IconUrl}
+                src={Add_Icon}
                 alt="Add Button"
                 width={15}
                 height={15}
